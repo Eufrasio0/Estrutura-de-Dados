@@ -17,17 +17,25 @@ typedef struct lista {
     int tam;
 } ListaAluno;
 
-void criarLista(ListaAluno *l);
-int listaVazia(ListaAluno *l);
-int tamanhoLista(ListaAluno *l);
-int obterAlunoPos(ListaAluno *l, int pos, Aluno *a);
-int obterPosicaoMat(ListaAluno *l, int mat);
-int inserirAlunoOrdenado(ListaAluno *l, Aluno a);
-int removerAlunoMat(ListaAluno *l, int mat);
-void RemoverAlunoPos (ListaAluno *l, int pos);
-void exibirLista(ListaAluno *l);
-void liberarLista(ListaAluno *l);
-int InserirNoFinal(ListaAluno *l, Aluno a);
+void exibirLista(ListaAluno* l);
+void criarLista(ListaAluno* l);
+void imprimirAluno(Aluno l);
+int inserirAlunoOrdenado(ListaAluno* l, Aluno a);
+int InserirNoFinal(ListaAluno* l, Aluno a);
+void liberarLista(ListaAluno* l);
+int listaVazia(ListaAluno* l);
 void menu();
+void menuInserir();
+void menuObter();
+void menuRemover();
+int obterAlunoMat(ListaAluno* l, int matricula, Aluno* a);
+int obterAlunoNome(ListaAluno* l, char* nome, Aluno* a);
+int obterAlunoPos(ListaAluno* l, int pos, Aluno* a);
+int obterPosicaoMat(ListaAluno* l, int mat);
+void ReceberDados(Aluno* a);
+int removerAlunoMat(ListaAluno* l, int mat);
+void RemoverAlunoPos(ListaAluno* l, int pos);
+int tamanhoLista(ListaAluno* l);
 #endif
+
 
